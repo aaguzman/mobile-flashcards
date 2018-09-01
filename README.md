@@ -1,3 +1,6 @@
+# Mobile FlashCard
+Application that allows a user to create flash card quizes. 
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 ### To Run
