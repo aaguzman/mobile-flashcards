@@ -52,6 +52,7 @@ class Quiz extends Component {
 
     render(){
         const questions = this.props.decks[this.props.navigation.state.params.title].questions
+        const { title } = this.props.navigation.state.params
         const question = questions[this.state.index]
         const viewIndex = this.state.index + 1;
         const percentCorrect = (this.state.numberCorrect/questions.length) * 100
@@ -71,15 +72,15 @@ class Quiz extends Component {
                                     <TouchableOpacity
                                         style = {styles.btn}
                                         onPress= {() => this.props.navigation.navigate(
-                                'NewCard',{ title: this.props.navigation.state.params.title})}>
+                                'NewCard',{ title: title})}>
                                         <Text>Add Card</Text>
                                     </TouchableOpacity>
                                     <TouchableOpacity
                                         style = {styles.btn}
                                         onPress = {() => this.props.navigation.navigate(
-                                        'Home')}
+                                        'Deck',{ title: title})}
                                     >
-                                        <Text>Back to Decks</Text>
+                                        <Text>Back to Deck</Text>
                                     </TouchableOpacity>
                                 </View>
                             )
@@ -94,9 +95,9 @@ class Quiz extends Component {
                                 <TouchableOpacity
                                     style = {styles.btn}
                                     onPress = {() => this.props.navigation.navigate(
-                                    'Home')}
+                                    'Deck',{ title: title})}
                                 >
-                                    <Text>Back to Decks</Text>
+                                    <Text>Back to Deck</Text>
                                 </TouchableOpacity>
                             </View>
                             )

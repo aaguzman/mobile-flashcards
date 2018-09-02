@@ -4,6 +4,7 @@ import Decks from './components/Decks'
 import NewCard from './components/NewCard'
 import Quiz from './components/Quiz'
 import NewDeck from './components/NewDeck'
+import DeckView from './components/DeckView'
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
@@ -38,6 +39,9 @@ const MainNav = createStackNavigator({
   },
   Quiz : {
     screen: Quiz
+  },
+  Deck : {
+    screen: DeckView
   }
 },
 {

@@ -31,6 +31,9 @@ class NewDeck extends Component {
         this.setState({
             text:''
         })
+
+        this.props.navigation.navigate(
+            'Deck',{ title: [deck.title]})
     }
 
     render(){
